@@ -74,3 +74,20 @@ function generateHTML(data) {
     </html>
     `;
 }
+function htmlFinish() {
+    const html = `  </div>
+    </main>
+</body>
+</html>`;
+
+
+    fs.appendFile("./dist/index.html", html, function (err) {
+        if (err) {
+            console.log(err);
+        };
+    });
+    console.log("Your file has been generated! Go check the dist folder. Thank you!");
+}
+
+
+module.exports = generateHTML, htmlFinish;
