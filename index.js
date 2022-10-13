@@ -7,7 +7,7 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const employees = [];
 
-//Creates function to write HTML file
+// Create function to write HTML file
 const writeFile = (data) => {
     return new Promise((resolve, reject) => {
         fs.writeFile('./dist/index.html', data, err => {
@@ -24,7 +24,7 @@ const writeFile = (data) => {
     });
 };
 
-//Creates a function that calls other employee functions to create the team object
+// Creates a function that calls other employee functions to create the team object
 const init = () => {
     return inquirer.prompt([
         {
